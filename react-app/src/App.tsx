@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './hooks/useAuth';
 import { CartProvider } from './hooks/useCart';
 import { WishlistProvider } from './hooks/useWishlist';
@@ -27,7 +27,6 @@ function App() {
       <AuthProvider>
         <CartProvider>
           <WishlistProvider>
-            <Router>
           <ScrollToTop />
           <div className="min-h-screen bg-gray-50 flex flex-col">
             <Navigation />
@@ -49,7 +48,6 @@ function App() {
             </main>
             <Footer />
           </div>
-          </Router>
           </WishlistProvider>
         </CartProvider>
       </AuthProvider>
